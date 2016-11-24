@@ -109,7 +109,8 @@
 Manuel Kauers, Institute for Algebra, J. Kepler University Linz, Austria.\\
     E-mails\,$:$ schen@amss.ac.cn, manuel.kauers@jku.at} %%% The address of the authors  %%%
 {$^*$ S.\ Chen was supported by the NSFC grant 11501552 and
-   by the President Fund of the Academy of Mathematics and Systems Science, CAS (2014-cjrwlzx-chshsh).
+   by the President Fund of the Academy of Mathematics and Systems Science, CAS (2014-cjrwlzx-chshsh), and a starting grant from the Ministry of Education
+   of China.
    M.\ Kauers was supported by the Austrian FWF grants F5004, Y464-N18, and W1214.\\
 {$^\diamond${\it This paper was recommended for publication by
 Editor . }}}
@@ -140,8 +141,8 @@ Editor . }}}
    present a selection of open problems in this context. We would be curious
    to hear about any substantial progress on any of these problems.}      % the abstract
 
-\Keywords{Computer Algebra, Creative Telescoping, Differential Algebra, Linear Operators,
- Ore Algebras, Symbolic Integration, Symbolic Summation.}        % the keywords
+\Keywords{Computer Algebra, creative telescoping, differential algebra, linear operators,
+ Ore algebras, symbolic integration, symbolic summation.}        % the keywords
 
 %\MRSubClass{05B05, 05B25, 20B25}      % MR(2000) Subject Classification
 
@@ -850,600 +851,605 @@ Summation and integration problems arise in all areas of mathematics,
  can help to compute the polynomials directly, without the detour through a differential equation.
 
 
-\acknowledgements{\rm We would like to thank the anonymous referee and Prof. Xiao-shan Gao for 
+\acknowledgements{\rm We would like to thank the anonymous referee and Prof. Xiao-shan Gao for
 constructive suggestions on this paper.}
 
 %% Please thank the anonymous people who make contributions to this article. If you don't want it, please delete it.
 
 
-\begin{thebibliography}{199}
+%\begin{thebibliography}{199}
+%\bibliographystyle{unsrt}
+%\bibliography{bib}
 
-\bibitem{abramov02a}
-Sergei~A. Abramov.
-\newblock Applicability of {Z}eilberger's algorithm to hypergeometric terms.
-\newblock In {\em Proceedings of ISSAC'02}, pages 1--7, 2002.
+\begin{thebibliography}{100}
 
-\bibitem{abramov03}
-Sergei~A. Abramov.
-\newblock When does {Z}eilberger's algorithm succeed?
-\newblock {\em Advances in Applied Mathematics}, 30(3):424--441, 2003.
+\bibitem{nemes97}
+Nemes I, Petkov{\v s}ek M, Wilf H, and Zeilberger D,
+\newblock How to do {M}onthly problems with your computer.
+\newblock {\it The American Mathematical Monthly}, 1997, {\bf 104}(6):505--519.
 
-\bibitem{abramov06a}
-Sergei~A. Abramov, Moulay~A. Barkatou, and Mark van Hoeij.
-\newblock Apparent singularities of linear difference equations with polynomial
-  coefficients.
-\newblock {\em Applicable Algebra in Engeneering, Communication and Computing},
-  17(2):117--133, 2006.
+\bibitem{kauers10j}
+Kauers M and Paule P,
+\newblock {\it The Concrete Tetrahedron}.
+\newblock Springer, 2011.
 
-\bibitem{abramov02}
-Sergei~A. Abramov and Ha~Q. Le.
-\newblock A criterion for the applicability of {Z}eilberger's algorithm to a
-  rational function.
-\newblock {\em Discrete Mathematics}, 259(1--3):1--17, 2002.
-
-\bibitem{abramov05a}
-Sergei~A. Abramov and Ha~Q. Le.
-\newblock On the order of the recurrence produced by the method of creative
-  telescoping.
-\newblock {\em Discrete Mathematics}, 298(1--3):2--17, 2005.
-
-\bibitem{abramov94}
-Sergei~A. Abramov and Marko Petkovsek.
-\newblock D'alembertian solutions of linear differential and difference
-  equations.
-\newblock In {\em Proceedings of ISSAC'94}, pages 169--174, 2004.
-
-\bibitem{abramov05}
-Sergei~A. Abramov and Marko Petkovsek.
-\newblock Gosper's algorithm, accurate summation, and the discrete
-  {N}ewton-{L}eibniz formula.
-\newblock In {\em Proceedings of ISSAC'05}, pages 5--12, 2005.
-
-\bibitem{abramov99b}
-Sergei~A. Abramov and Mark van Hoeij.
-\newblock Desingularization of linear difference operators with polynomial
-  coefficients.
-\newblock In {\em Proceedings of ISSAC'99}, pages 269--275, 1999.
-
-\bibitem{almkvist90}
-Gert Almkvist and Doron Zeilberger.
-\newblock The method of differentiating under the integral sign.
-\newblock {\em Journal of Symbolic Computation}, 11(6):571--591, 1990.
-
-\bibitem{apagodu06}
-Moa Apagodu and Doron Zeilberger.
-\newblock Multi-variable {Z}eilberger and {A}lmkvist-{Z}eilberger algorithms
-  and the sharpening of {W}ilf-{Z}eilberger theory.
-\newblock {\em Advances in Applied Mathematics}, 37(2):139--152, 2006.
-
-\bibitem{beck03}
-Matthias Beck and Dennis Pixton.
-\newblock The {E}hrhart polynomial of the {B}irkhoff polytope.
-\newblock {\em Discrete Computational Geometry}, 30:623--637, 2003.
-
-\bibitem{beck07}
-Matthias Beck and Sinai Robins.
-\newblock {\em Computing the Continuous Discretely: Integer-Point Enumeration
-  in Polyhedra}.
-\newblock Springer, 2007.
+\bibitem{schneider16}
+Schneider C,
+\newblock {Symbolic Summation in Difference Rings and Applications}.
+\newblock In {\it Proceedings of ISSAC'16}, pages 9--12, 2016.
 
 \bibitem{benoit10}
-Alexandre Benoit, Frederic Chyzak, Alexis Darrasse, Stefan Gerhold, Marc
-  Mezzarobba, and Bruno Salvy.
+ Benoit A, Chyzak F, Darrasse A, Gerhold S, Mezzarobba M, and Salvy B,
 \newblock {The Dynamic Dictionary of Mathematical Functions (DDMF)}.
-\newblock In {\em Proceedings of ICMS 2010}, volume 6327 of {\em LNCS}, pages
+\newblock In {\it Proceedings of ICMS 2010}, volume {\bf 6327} of {\it LNCS}, pages
   35--41, 2011.
 
-\bibitem{bernardi16}
-Olivier Bernardi, Mireille Bousquet-Melou, and Kilian Raschel.
-\newblock Counting quadrant walks via {T}utte's invariant method.
-\newblock In {\em Proceedings of FPSAC'16}, 2016.
-\newblock to appear.
+\bibitem{koutschan10a}
+Koutschan C, Kauers M, and Zeilberger D,
+\newblock Proof of {G}eorge {A}ndrews' and {D}avid {R}obbins'
+  $q$-{TSPP}-conjecture.
+\newblock {\it Proceedings of the National Academy of Sciences of the United
+  States of America}, 2011,
+  {\bf 108}(6):2196--2199.
 
-\bibitem{bostan10b}
-Alin Bostan, Shaoshi Chen, Fr{\'e}d{\'e}ric Chyzak, and Ziming Li.
-\newblock Complexity of creative telescoping for bivariate rational functions.
-\newblock In {\em Proceedings of ISSAC'10}, pages 203--210, 2010.
+\bibitem{WuGao2007}
+Wu W and Gao X,
+\newblock Mathematics mechanization and applications after thirty years.
+\newblock {\it Frontiers in Computer Science}, 2007, {\bf 1}(1):1--8.
 
-\bibitem{bostan13a}
-Alin Bostan, Shaoshi Chen, Fr{\'e}d{\'e}ric Chyzak, Ziming Li, and Guoce Xin.
-\newblock Hermite reduction and creative telescoping for hyperexponential
-  functions.
-\newblock In {\em Proceedings of ISSAC'13}, pages 77--84, 2013.
+\bibitem{gosper78}
+Gosper W,
+\newblock Decision procedure for indefinite hypergeometric summation.
+\newblock {\it Proceedings of the National Academy of Sciences of the United
+  States of America}, 1978, {\bf 75}:40--42.
 
-\bibitem{bostan11}
-Alin Bostan, Fr{\'e}d{\'e}ric Chyzak, Mark van Hoeij, and Lucien Pech.
-\newblock Explicit formula for the generating series of diagonal 3d rook paths.
-\newblock {\em Seminaire Lotharingien Combinatoire}, 66(B66a), 2011.
+\bibitem{wilf90}
+Wilf H and Zeilberger D,
+\newblock Rational functions certify combinatorial identities.
+\newblock {\it Journal of the American Mathematical Society}, 1990, {\bf 3}:147--158.
 
-\bibitem{bostan16}
-Alin Bostan, Louis Dumont, and Bruno Salvy.
-\newblock Efficient algorithms for mixed creative telescoping.
-\newblock In {\em Proceedings of ISSAC'16}, pages 127--134, 2016.
+\bibitem{wilf92a}
+Wilf H and Zeilberger D,
+\newblock An algorithmic proof theory for hypergeometric (ordinary and $q$)
+  multisum/integral identities.
+\newblock {\it Inventiones mathematicae}, 1992, {\bf 108}:575--633.
 
-\bibitem{bostan13b}
-Alin Bostan, Pierre Lairez, and Bruno Salvy.
-\newblock Creative telescoping for rational functions using the
-  {G}riffiths-{D}work method.
-\newblock In {\em Proceedings of ISSAC'13}, pages 93--100, 2013.
+\bibitem{zeilberger91}
+Zeilberger D,
+\newblock The method of creative telescoping.
+\newblock {\it Journal of Symbolic Computation}, 1991, {\bf 11}:195--204.
 
-\bibitem{bostan15}
-Alin Bostan, Pierre Lairez, and Bruno Salvy.
-\newblock Multiple binomial sums.
-\newblock Technical Report 1510.07487, ArXiv, 2015.
+\bibitem{petkovsek97}
+Petkov{\v s}ek M, Wilf H, and Zeilberger D,
+\newblock {\it $A=B$}.
+\newblock AK Peters, Ltd., 1997.
 
-\bibitem{bronstein98}
-Manuel Bronstein.
-\newblock Symbolic integration tutorial.
-\newblock ISSAC'98, 1998.
+\bibitem{vanDerPoorten79}
+van~der Poorten A,
+\newblock A proof that {E}uler missed\dots{} --- {A}p{\'e}ry's proof of the
+  irrationality for $\zeta(3)$.
+\newblock {\it The Mathematical Intelligencer}, 1979, {\bf 1}:195--203.
 
-\bibitem{bronstein97}
-Manuel Bronstein.
-\newblock {\em Symbolic Integration~I}, volume~1 of {\em Algorithms and
-  Computation in Mathematics}.
-\newblock Springer, 2nd edition, 2005.
-
-\bibitem{cha10a}
-Yongjae Cha.
-\newblock {\em {Closed Form Solutions of Linear Difference Equations}}.
-\newblock PhD thesis, Florida State University, 2010.
-
-\bibitem{cha10}
-Yongjae Cha, Mark van Hoeij, and Giles Levy.
-\newblock {Solving recurrence relations using local invariants}.
-\newblock In {\em {Proceedings ISSAC'10}}, pages 303--309, 2010.
-
-\bibitem{chen16}
-Shaoshi Chen, Qing-Hu Hou, George Labahn, and Rong-Hua Wang.
-\newblock Existence problem of telescopers: Beyond the bivariate case.
-\newblock In {\em Proceedings of ISSAC'16}, pages 167--174, 2016.
-
-\bibitem{chen15a}
-Shaoshi Chen, Hui Huang, Manuel Kauers, and Ziming Li.
-\newblock A modified {A}bramov-{P}etkovsek reduction and creative telescoping
-  for hypergeometric terms.
-\newblock In {\em Proceedings of ISSAC'15}, pages 117--124, 2015.
-
-\bibitem{chen12c}
-Shaoshi Chen and Manuel Kauers.
-\newblock Order-degree curves for hypergeometric creative telescoping.
-\newblock In {\em Proceedings of ISSAC'12}, pages 122--129, 2012.
-
-\bibitem{chen12b}
-Shaoshi Chen and Manuel Kauers.
-\newblock Trading order for degree in creative telescoping.
-\newblock {\em Journal of Symbolic Computation}, 47(8):968--995, 2012.
-
-\bibitem{chen14a}
-Shaoshi Chen, Manuel Kauers, and Christoph Koutschan.
-\newblock A generalized apagodu-zeilberger algorithm.
-\newblock In {\em Proceedings of ISSAC'14}, pages 107--114, 2014.
-
-\bibitem{chen16a}
-Shaoshi Chen, Manuel Kauers, and Christoph Koutschan.
-\newblock Reduction-based creative telescoping for algebraic functions.
-\newblock In {\em Proceedings of ISSAC'16}, pages 175--182, 2016.
-
-\bibitem{chen15b}
-Shaoshi Chen, Manuel Kauers, and Michael~F. Singer.
-\newblock Desingularization of {O}re operators.
-\newblock {\em Journal of Symbolic Computation}, 74(5/6):617--626, 2016.
-
-\bibitem{chen12d}
-Shaoshi Chen and Michael~F. Singer.
-\newblock Residues and telescopers for bivariate rational functions.
-\newblock {\em Advances in Applied Mathematics}, 49(2):111--133, 2012.
-
-\bibitem{chen14b}
-Shaoshi Chen and Michael~F. Singer.
-\newblock On the summability of bivariate rational functions.
-\newblock {\em Journal of Algebra}, 409:320--343, 2014.
-
-\bibitem{chen09}
-William Y.~C. Chen and Lisa~H. Sun.
-\newblock Extended {Z}eilberger's algorithm for identities on {B}ernoulli and
-  {E}uler polynomials.
-\newblock {\em Journal of Number Theory}, 129(9):2111--2132, 2009.
-
-\bibitem{chen03}
-Yufu Chen and Xiao-Shan Gao.
-\newblock Involutive characteristic sets of algebraic partial differential
-  equation systems.
-\newblock {\em Science in China (A)}, 46(4):469--487, 2003.
-
-\bibitem{chevalley51}
-Charles Chevalley.
-\newblock {\em Introduction to the Theory of Algebraic Functions of One
-  Variable}.
-\newblock AMS, 1951.
-
-\bibitem{christol88}
-Gilles Christol.
-\newblock Globally bounded solutions of differential equations.
-\newblock In {\em Analytic number theory}, volume 1434 of {\em Lecture Notes in
-  Mathematics}, pages 45--64, 1990.
+\bibitem{zeilberger90}
+Zeilberger D,
+\newblock A holonomic systems approach to special function identities.
+\newblock {\it Journal of Computational and Applied Mathematics}, 1990, {\bf 32}:321--368.
 
 \bibitem{chyzak98a}
-Fr{\'e}d{\'e}ric Chyzak.
-\newblock {\em Fonctions holonomes en calcul formel}.
+Chyzak F,
+\newblock {\it Fonctions holonomes en calcul formel}.
 \newblock PhD thesis, INRIA Rocquencourt, 1998.
 
 \bibitem{chyzak00}
-Fr{\'e}d{\'e}ric Chyzak.
+Chyzak F,
 \newblock An extension of {Z}eilberger's fast algorithm to general holonomic
   functions.
-\newblock {\em Discrete Mathematics}, 217:115--134, 2000.
-
-\bibitem{chyzak14}
-Fr{\'e}d{\'e}ric Chyzak.
-\newblock The {ABC} of creative telescoping: Algorithms, bounds, complexity.
-\newblock Memoire d'habilitation a diriger les recherches, 2014.
-
-\bibitem{chyzak09a}
-Fr{\'e}d{\'e}ric Chyzak, Manuel Kauers, and Bruno Salvy.
-\newblock A non-holonomic systems approach to special function identities.
-\newblock In John May, editor, {\em Proceedings of ISSAC'09}, pages 111--118,
-  2009.
-
-\bibitem{chyzak14a}
-Fr{\'e}d{\'e}ric Chyzak, Assia Mahboubi, Thomas Sibut-Pinote, and Enrico Tassi.
-\newblock A computer-algebra-based formal proof of the irrationality of
-  $\zeta(3)$.
-\newblock In Gerwin Klein and Ruben Gamboa, editors, {\em Interactive Theorem
-  Proving}, number 8558 in Lecture Notes in Computer Science, pages 160--176,
-  Vienna, Austria, 2014. Springer.
-
-\bibitem{chyzak98}
-Fr{\'e}d{\'e}ric Chyzak and Bruno Salvy.
-\newblock Non-commutative elimination in {O}re algebras proves multivariate
-  identities.
-\newblock {\em Journal of Symbolic Computation}, 26:187--227, 1998.
-
-\bibitem{li16}
-Hao Du, Hui Huang, and Ziming Li.
-\newblock Reduction-based creative telescoping for $q$-hypergeometric terms.
-\newblock in preparation.
-
-\bibitem{dwork62}
-Bernhard Dwork.
-\newblock On the zeta function of a hypersurface.
-\newblock {\em Publications Mathematiques de l'IHES}, 12:5--68, 1962.
-
-\bibitem{dwork64}
-Bernhard Dwork.
-\newblock On the zeta function of a hypersurface {II}.
-\newblock {\em Annals of Mathematics}, 80(2):227--299, 1964.
-
-\bibitem{fasenmyer49}
-Sister Mary~Celine Fasenmyer.
-\newblock A note on pure recurrence relations.
-\newblock {\em The American Mathematical Monthly}, 56:14--17, 1949.
-
-\bibitem{gao2013}
-Xiao-Shan Gao, Wei Li, and Chun-Ming Yuan.
-\newblock Intersection theory in differential algebraic geometry: generic
-  intersections and the differential {C}how form.
-\newblock {\em Trans. Amer. Math. Soc.}, 365(9):4575--4632, 2013.
-
-\bibitem{gerdt97}
-Vladimir~P. Gerdt.
-\newblock Gr{\"o}bner bases and involutive methods of algebraic and
-  differential equations.
-\newblock {\em Math. Comput. Modeling}, 25(8/9):75--90, 1997.
-
-\bibitem{gosper78}
-William Gosper.
-\newblock Decision procedure for indefinite hypergeometric summation.
-\newblock {\em Proceedings of the National Academy of Sciences of the United
-  States of America}, 75:40--42, 1978.
-
-\bibitem{griffiths69}
-Philip~A. Griffiths.
-\newblock On the periods of certain rational integrals {I}.
-\newblock {\em Annals of Mathematics}, 90(3):460--495, 1969.
-
-\bibitem{griffiths69a}
-Philip~A. Griffiths.
-\newblock On the periods of certain rational integrals {II}.
-\newblock {\em Annals of Mathematics}, 90(3):496--541, 1969.
-
-\bibitem{guo14}
-Li~Guo, Georg Regensburger, and Markus Rosenkranz.
-\newblock On integro-differential algebras.
-\newblock {\em Journal of Pure and Applied Algebra}, 218:456--473, 2014.
-
-\bibitem{harrison15}
-John Harrison.
-\newblock Formal proofs of hypergeometric sums.
-\newblock {\em Journal of Automated Reasoning}, 55:223--243, 2015.
-
-\bibitem{hendriks98}
-Peter~A. Hendriks and Michael~F. Singer.
-\newblock Solving difference equations in finite terms.
-\newblock {\em Journal of Symbolic Computation}, 27(3):239--259, 1999.
-
-\bibitem{hou15}
-Qing-Hu Hou and Ronghua Wang.
-\newblock An algorithm for deciding the summability of bivariate rational
-  functions.
-\newblock {\em Advances in Applied Mathematics}, 64(3):31--49, 2015.
-
-\bibitem{huang16}
-Hui Huang.
-\newblock New bounds for creative telescoping.
-\newblock In {\em Proceedings of ISSAC'16}, pages 279--286, 2016.
-
-\bibitem{hubert00}
-Evelyne Hubert.
-\newblock Factorization-free decomposition algorithms in differential algebra.
-\newblock {\em Journal of Symbolic Computation}, 29(4--5):641--662, 2000.
-
-\bibitem{imamoglu15}
-Erdal Imamoglu and Mark van Hoeij.
-\newblock Computing hypergeometric solutions of second order linear
-  differential equations using quotients of formal solutions.
-\newblock In {\em Proceedings ISSAC'15}, pages 235--242, 2015.
-
-\bibitem{jaroschek13a}
-Maximilian Jaroschek, Manuel Kauers, Shaoshi Chen, and Michael~F. Singer.
-\newblock Desingularization explains order-degree curves for {Ore} operators.
-\newblock In Manuel Kauers, editor, {\em Proceedings of ISSAC'13}, pages
-  157--164, 2013.
-
-\bibitem{karr81}
-Michael Karr.
-\newblock Summation in finite terms.
-\newblock {\em Journal of the ACM}, 28:305--350, 1981.
-
-\bibitem{karr85}
-Michael Karr.
-\newblock Theory of summation in finite terms.
-\newblock {\em Journal of Symbolic Computation}, 1(3):303--315, 1985.
-
-\bibitem{kauers07n}
-Manuel Kauers.
-\newblock Summation algorithms for {S}tirling number identities.
-\newblock {\em Journal of Symbolic Computation}, 42(11):948--970, 2007.
-
-\bibitem{kauers10j}
-Manuel Kauers and Peter Paule.
-\newblock {\em The Concrete Tetrahedron}.
-\newblock Springer, 2011.
-
-\bibitem{kauers14d}
-Manuel Kauers and Lily Yen.
-\newblock On the length of integers in telescopers for proper hypergeometric
-  terms.
-\newblock {\em Journal of Symbolic Computation}, 66(1--2):21--33, 2015.
-
-\bibitem{kauers11b}
-Manuel Kauers and Doron Zeilberger.
-\newblock The computational challenge of enumerating high dimensional rook
-  walks.
-\newblock {\em Advances in Applied Mathematics}, 47(4):813--819, 2011.
-
-\bibitem{koutschan10b}
-Christoph Koutschan.
-\newblock A fast approach to creative telescoping.
-\newblock {\em Mathematics in Computer Science}, 4(2--3):259--266, 2010.
-
-\bibitem{koutschan10c}
-Christoph Koutschan.
-\newblock {HolonomicFunctions (User's Guide)}.
-\newblock Technical Report 10-01, RISC Report Series, University of Linz,
-  Austria, January 2010.
-
-\bibitem{koutschan10a}
-Christoph Koutschan, Manuel Kauers, and Doron Zeilberger.
-\newblock Proof of {G}eorge {A}ndrews' and {D}avid {R}obbins'
-  $q$-{TSPP}-conjecture.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  108(6):2196--2199, 2011.
-
-\bibitem{kunwar13}
-Vijay~Jung Kunwar and Mark van Hoeij.
-\newblock Second order differential equations with hypergeometric solutions of
-  degree three.
-\newblock In {\em Proceedings of ISSAC'13}, pages 235--242, 2013.
-
-\bibitem{lipshitz88}
-L.~Lipshitz.
-\newblock The diagonal of a {D}-finite power series is {D}-finite.
-\newblock {\em Journal of Algebra}, 113:373--378, 1988.
-
-\bibitem{majewicz96}
-John~E. Majewicz.
-\newblock {WZ}-style certification and sister {C}eline's technique for
-  {A}bel-type identities.
-\newblock {\em J. Difference Eqs and Appl.}, 2:55--65, 1996.
-
-\bibitem{mansfield93}
-Elisabeth Mansfield.
-\newblock {\em Differential {Gr\"obner} bases}.
-\newblock PhD thesis, University of Sydney, 1993.
-
-\bibitem{mohammed05}
-Mohamud Mohammed and Doron Zeilberger.
-\newblock Sharp upper bounds for the orders of the recurrences outputted by the
-  {Z}eilberger and q-{Z}eilberger algorithms.
-\newblock {\em Journal of Symbolic Computation}, 39(2):201--207, 2005.
-
-\bibitem{nemes97}
-Istv{\'a}n Nemes, Marko Petkov{\v s}ek, Herbert~S. Wilf, and Doron Zeilberger.
-\newblock How to do {M}onthly problems with your computer.
-\newblock {\em The American Mathematical Monthly}, 104, 1997.
-
-\bibitem{petkovsek92}
-Marko Petkov{\v s}ek.
-\newblock Hypergeometric solutions of linear recurrences with polynomial
-  coefficients.
-\newblock {\em Journal of Symbolic Computation}, 14(2--3):243--264, 1992.
-
-\bibitem{petkovsek97}
-Marko Petkov{\v s}ek, Herbert Wilf, and Doron Zeilberger.
-\newblock {\em $A=B$}.
-\newblock AK Peters, Ltd., 1997.
-
-\bibitem{picard33}
-Emile Picard.
-\newblock Sur les periodes des integrales doubles et sur une classe d'equations
-  differentielles lineaires.
-\newblock {\em Annales scientifiques de l'E.N.S.}, 50:393--395, 1933.
-
-\bibitem{picard06}
-Emile Picard and Georges Simart.
-\newblock {\em Theorie des fonctions algebriques de deux variables
-  independantes}.
-\newblock Gauthier-Villars, 1906.
-
-\bibitem{raab12}
-Clemens Raab.
-\newblock {\em Definite Integration in Differential Fields}.
-\newblock PhD thesis, Johannes Kepler University, 2012.
-
-\bibitem{regensburger16}
-Georg Regensburger.
-\newblock Symbolic computation with integro-differential operators.
-\newblock In {\em Proceedings of ISSAC'16}, pages 17--18, 2016.
-
-\bibitem{regensburger09}
-Georg Regensburger, Markus Rosenkranz, and Johannes Middeke.
-\newblock A skew polynomial approach to integro-differential operators.
-\newblock In {\em Proceedings of ISSAC'09}, pages 287--294, 2009.
-
-\bibitem{risch69}
-Robert~H. Risch.
-\newblock The problem of integration in finite terms.
-\newblock {\em Transactions of the American Mathematical Society},
-  139:167--189, 1969.
-
-\bibitem{risch70}
-Robert~H. Risch.
-\newblock The solution of the problem of integration in finite terms.
-\newblock {\em Bulletin of the American Mathematical Society}, 79:605--608,
-  1970.
-
-\bibitem{rosenkranz08}
-Markus Rosenkranz and Georg Regensburger.
-\newblock Integro-differential polynomials and operators.
-\newblock In {\em Proceedings of ISSAC'08}, pages 261--268, 2008.
-
-\bibitem{rosenkranz08a}
-Markus Rosenkranz and Georg Regensburger.
-\newblock Solving and factoring boundary problems for linear ordinary
-  differential equations in differential algebras.
-\newblock {\em Journal of Symbolic Computation}, 43(8):515--544, 2008.
-
-\bibitem{ryabenko11}
-Anna~A. Ryabenko.
-\newblock A definite summation of hypergeometric terms of special kind.
-\newblock {\em Programming and Computer Software}, 37(4):187--191, 2011.
+\newblock {\it Discrete Mathematics}, 2000, {\bf 217}:115--134.
 
 \bibitem{schneider01}
-Carsten Schneider.
-\newblock {\em Symbolic Summation in Difference Fields}.
+Schneider C,
+\newblock {\it Symbolic Summation in Difference Fields}.
 \newblock PhD thesis, RISC-Linz, Johannes Kepler Universit{\"a}t Linz, 2001.
 
-\bibitem{schneider05a}
-Carsten Schneider.
-\newblock Finding telescopers with minimal depth for indefinite nested sum and
-  product expressions.
-\newblock In {\em Proceedings of ISSAC'05}, pages 285--292, July 2005.
-
 \bibitem{schneider08}
-Carsten Schneider.
+Schneider C,
 \newblock A refined difference field theory for symbolic summation.
-\newblock {\em Journal of Symbolic Computation}, 43:611--644, 2008.
+\newblock {\it Journal of Symbolic Computation}, 2008, {\bf 43}:611--644.
 
 \bibitem{schneider13b}
-Carsten Schneider.
+Schneider C,
 \newblock Simplifying multiple sums in difference fields.
-\newblock In Johannes Bl{\"u}mlein and Carsten Schneider, editors, {\em
+\newblock In Johannes Bl{\"u}mlein and Carsten Schneider, editors, {\it
   Computer Algebra in Quantum Field Theory: Integration, Summation and Special
   Functions}, Texts and Monographs in Symbolic Computation, pages 325--360.
   Springer, 2013.
 
-\bibitem{schneider16}
-Carsten Schneider.
-\newblock {Symbolic Summation in Difference Rings and Applications}.
-\newblock In {\em Proceedings of ISSAC'16}, pages 9--12, 2016.
+\bibitem{chyzak14}
+Chyzak F,
+\newblock The {ABC} of creative telescoping: Algorithms, bounds, complexity.
+\newblock Memoire d'habilitation a diriger les recherches, 2014.
+
+\bibitem{fasenmyer49}
+Fasenmyer M. C,
+\newblock A note on pure recurrence relations.
+\newblock {\it The American Mathematical Monthly}, 1949, {\bf 56}:14--17.
 
 \bibitem{takayama90}
-Nobuki Takayama.
+Takayama N,
 \newblock An algorithm of constructing the integral of a module.
-\newblock In {\em Proceedings of ISSAC'90}, pages 206--211, 1990.
+\newblock In {\it Proceedings of ISSAC'90}, pages 206--211, 1990.
 
 \bibitem{takayama90a}
-Nobuki Takayama.
+Takayama N,
 \newblock Gr{\"o}bner basis, integration and transcendental functions.
-\newblock In {\em Proceedings of ISSAC'90}, pages 152--156, 1990.
-
-\bibitem{trager84}
-Barry~M. Trager.
-\newblock {\em On the Integration of Algebraic Functions}.
-\newblock PhD thesis, MIT, 1984.
-
-\bibitem{vanDerPoorten79}
-Alfred van~der Poorten.
-\newblock A proof that {E}uler missed\dots{} --- {A}p{\'e}ry's proof of the
-  irrationality for $\zeta(3)$.
-\newblock {\em The Mathematical Intelligencer}, 1:195--203, 1979.
-
-\bibitem{put97}
-Marius van~der Put and Michael Singer.
-\newblock {\em {G}alois Theory of Difference Equations}, volume 1666 of {\em
-  Lecture Notes in Mathematics}.
-\newblock Springer, 1997.
-
-\bibitem{hoeij10}
-Mark van Hoeij and Quan Yuan.
-\newblock Finding all {B}essel type solutions for linear differential equations
-  with rational function coefficients.
-\newblock In {\em Proceedings of ISSAC'10}, pages 37--44, 2010.
-
-\bibitem{verbaeten74}
-Pierre Verbaeten.
-\newblock The automatic construction of pure recurrence relations.
-\newblock {\em ACM Sigsam Bulletin}, 8, 1974.
+\newblock In {\it Proceedings of ISSAC'90}, pages 152--156, 1990.
 
 \bibitem{wegschaider97}
-Kurt Wegschaider.
+Wegschaider K,
 \newblock Computer generated proofs of binomial multi-sum identities.
 \newblock Master's thesis, RISC-Linz, May 1997.
 
-\bibitem{wilf92a}
-Herb~S. Wilf and Doron Zeilberger.
-\newblock An algorithmic proof theory for hypergeometric (ordinary and $q$)
-  multisum/integral identities.
-\newblock {\em Inventiones mathematicae}, 108:575--633, 1992.
-
-\bibitem{wilf90}
-Herbert~S. Wilf and Doron Zeilberger.
-\newblock Rational functions certify combinatorial identities.
-\newblock {\em Journal of the American Mathematical Society}, 3:147--158, 1990.
-
-\bibitem{WuGao2007}
-Wenjun Wu and Xiaoshan Gao.
-\newblock Mathematics mechanization and applications after thirty years.
-\newblock {\em Frontiers in Computer Science}, 1(1):1--8, 2007.
+\bibitem{chyzak98}
+Chyzak F and Salvy B,
+\newblock Non-commutative elimination in {O}re algebras proves multivariate
+  identities.
+\newblock {\it Journal of Symbolic Computation}, 1998, {\bf 26}:187--227.
 
 \bibitem{zeilberger90a}
-Doron Zeilberger.
+Zeilberger D,
 \newblock A fast algorithm for proving terminating hypergeometric identities.
-\newblock {\em Discrete Mathematics}, 80:207--211, 1990.
+\newblock {\it Discrete Mathematics}, 1990, {\bf 80}:207--211.
 
-\bibitem{zeilberger90}
-Doron Zeilberger.
-\newblock A holonomic systems approach to special function identities.
-\newblock {\em Journal of Computational and Applied Mathematics}, 32:321--368,
-  1990.
+\bibitem{almkvist90}
+Almkvist G and Zeilberger D,
+\newblock The method of differentiating under the integral sign.
+\newblock {\it Journal of Symbolic Computation}, 1990, {\bf 11}(6):571--591.
 
-\bibitem{zeilberger91}
-Doron Zeilberger.
-\newblock The method of creative telescoping.
-\newblock {\em Journal of Symbolic Computation}, 11:195--204, 1991.
+\bibitem{kauers07n}
+Kauers M,
+\newblock Summation algorithms for {S}tirling number identities.
+\newblock {\it Journal of Symbolic Computation}, 2007, {\bf 42}(11):948--970.
+
+\bibitem{mohammed05}
+Mohammed M and  Zeilberger D,
+\newblock Sharp upper bounds for the orders of the recurrences outputted by the
+  {Z}eilberger and q-{Z}eilberger algorithms.
+\newblock {\it Journal of Symbolic Computation}, 2005, {\bf 39}(2):201--207.
+
+\bibitem{apagodu06}
+Apagodu M and Zeilberger D,
+\newblock Multi-variable {Z}eilberger and {A}lmkvist-{Z}eilberger algorithms
+  and the sharpening of {W}ilf-{Z}eilberger theory.
+\newblock {\it Advances in Applied Mathematics}, 2006, {\bf 37}(2):139--152.
+
+\bibitem{koutschan10b}
+Koutschan C,
+\newblock A fast approach to creative telescoping.
+\newblock {\it Mathematics in Computer Science}, 2010, {\bf 4}(2--3):259--266.
+
+\bibitem{chen12b}
+Chen S and  Kauers M,
+\newblock Trading order for degree in creative telescoping.
+\newblock {\it Journal of Symbolic Computation}, 2012, {\bf 47}(8):968--995.
+
+\bibitem{chen12c}
+Chen S and  Kauers M,
+\newblock Order-degree curves for hypergeometric creative telescoping.
+\newblock In {\it Proceedings of ISSAC'12}, pages 122--129, 2012.
+
+\bibitem{chen14a}
+Chen S, Kauers M, and Koutschan C,
+\newblock A generalized apagodu-zeilberger algorithm.
+\newblock In {\it Proceedings of ISSAC'14}, pages 107--114, 2014.
+
+\bibitem{bostan10b}
+Bostan A, Chen S, Chyzak F, and Li Z,
+\newblock Complexity of creative telescoping for bivariate rational functions.
+\newblock In {\it Proceedings of ISSAC'10}, pages 203--210, 2010.
+
+\bibitem{bostan13a}
+Bostan A, Chen S, Chyzak F, Li Z, and Xin G,
+\newblock Hermite reduction and creative telescoping for hyperexponential
+  functions.
+\newblock In {\it Proceedings of ISSAC'13}, pages 77--84, 2013.
+
+\bibitem{chen15a}
+Chen S, Huang H, Kauers M, and Li Z,
+\newblock A modified {A}bramov-{P}etkovsek reduction and creative telescoping
+  for hypergeometric terms.
+\newblock In {\it Proceedings of ISSAC'15}, pages 117--124, 2015.
+
+\bibitem{huang16}
+Huang H,
+\newblock New bounds for creative telescoping.
+\newblock In {\it Proceedings of ISSAC'16}, pages 279--286, 2016.
+
+\bibitem{chen16a}
+Chen S, Kauers M, and  Koutschan C,
+\newblock Reduction-based creative telescoping for algebraic functions.
+\newblock In {\it Proceedings of ISSAC'16}, pages 175--182, 2016.
+
+\bibitem{bostan16}
+Bostan A, Dumont L, and Salvy B,
+\newblock Efficient algorithms for mixed creative telescoping.
+\newblock In {\it Proceedings of ISSAC'16}, pages 127--134, 2016.
+
+\bibitem{li16}
+Du H, Huang H, and Li Z,
+\newblock Reduction-based creative telescoping for $q$-hypergeometric terms.
+\newblock in preparation.
+
+\bibitem{trager84}
+Trager B,
+\newblock {\it On the Integration of Algebraic Functions}.
+\newblock PhD thesis, MIT, 1984.
+
+\bibitem{bronstein98}
+Bronstein M,
+\newblock Symbolic integration tutorial.
+\newblock ISSAC'98, 1998.
+
+\bibitem{chevalley51}
+Chevalley C,
+\newblock {\it Introduction to the Theory of Algebraic Functions of One
+  Variable}.
+\newblock AMS, 1951.
+
+\bibitem{kauers14d}
+Kauers M and Yen L,
+\newblock On the length of integers in telescopers for proper hypergeometric
+  terms.
+\newblock {\it Journal of Symbolic Computation},  2015, {\bf 66}(1--2):21--33.
+
+\bibitem{jaroschek13a}
+Jaroschek M, Kauers M,  Chen S, and  Singer M,
+\newblock Desingularization explains order-degree curves for {Ore} operators.
+\newblock In Manuel Kauers, editor, {\it Proceedings of ISSAC'13}, pages
+  157--164, 2013.
+
+\bibitem{abramov99b}
+ Abramov S, and van Hoeij M,
+\newblock Desingularization of linear difference operators with polynomial
+  coefficients.
+\newblock In {\it Proceedings of ISSAC'99}, pages 269--275, 1999.
+
+\bibitem{abramov06a}
+ Abramov S,   Barkatou M, and van Hoeij M,
+\newblock Apparent singularities of linear difference equations with polynomial
+  coefficients.
+\newblock {\it Applicable Algebra in Engeneering, Communication and Computing},
+  2006, {\bf 17}(2):117--133.
+
+\bibitem{chen15b}
+Chen S, Kauers M, and Singer M,
+\newblock Desingularization of {O}re operators.
+\newblock {\it Journal of Symbolic Computation}, 2016, {\bf 74}(5/6):617--626.
+
+\bibitem{risch69}
+Risch R,
+\newblock The problem of integration in finite terms.
+\newblock {\it Transactions of the American Mathematical Society},
+ 1969, {\bf 139}:167--189.
+
+\bibitem{risch70}
+Risch R,
+\newblock The solution of the problem of integration in finite terms.
+\newblock {\it Bulletin of the American Mathematical Society}, 1970, {\bf 79}:605--608.
+
+\bibitem{bronstein97}
+Bronstein M,
+\newblock {\it Symbolic Integration~I}, volume~1 of {\it Algorithms and
+  Computation in Mathematics}.
+\newblock Springer, 2nd edition, 2005.
+
+\bibitem{karr81}
+Karr M,
+\newblock Summation in finite terms.
+\newblock {\it Journal of the ACM}, 28:305--350, 1981.
+
+\bibitem{karr85}
+Karr M,
+\newblock Theory of summation in finite terms.
+\newblock {\it Journal of Symbolic Computation}, 1985, {\bf 1}(3):303--315.
+
+\bibitem{abramov02a}
+Abramov S,
+\newblock Applicability of {Z}eilberger's algorithm to hypergeometric terms.
+\newblock In {\it Proceedings of ISSAC'02}, pages 1--7, 2002.
+
+\bibitem{abramov02}
+Abramov S and Le H,
+\newblock A criterion for the applicability of {Z}eilberger's algorithm to a
+  rational function.
+\newblock {\it Discrete Mathematics}, 2002, {\bf 259}(1--3):1--17.
+
+\bibitem{abramov03}
+Abramov S,
+\newblock When does {Z}eilberger's algorithm succeed?
+\newblock {\it Advances in Applied Mathematics}, 2003, {\bf 30}(3):424--441.
+
+\bibitem{abramov05a}
+Abramov S and Le H,
+\newblock On the order of the recurrence produced by the method of creative
+  telescoping.
+\newblock {\it Discrete Mathematics}, 2005, {\bf 298}(1--3):2--17.
+
+\bibitem{raab12}
+Raab C,
+\newblock {\it Definite Integration in Differential Fields}.
+\newblock PhD thesis, Johannes Kepler University, 2012.
+
+\bibitem{schneider05a}
+Schneider C,
+\newblock Finding telescopers with minimal depth for indefinite nested sum and
+  product expressions.
+\newblock In {\it Proceedings of ISSAC'05}, pages 285--292, July 2005.
+
+\bibitem{verbaeten74}
+Verbaeten P,
+\newblock The automatic construction of pure recurrence relations.
+\newblock {\it ACM Sigsam Bulletin}, 1974, {\bf 8}(3):96--98.
+
+\bibitem{chen12d}
+ Chen C and  Singer M,
+\newblock Residues and telescopers for bivariate rational functions.
+\newblock {\it Advances in Applied Mathematics}, 2012, {\bf 49}(2):111--133.
+
+\bibitem{chen14b}
+ Chen C and  Singer M,
+\newblock On the summability of bivariate rational functions.
+\newblock {\it Journal of Algebra}, 2014, {\bf 409}:320--343.
+
+\bibitem{hou15}
+Hou Q and Wang R,
+\newblock An algorithm for deciding the summability of bivariate rational
+  functions.
+\newblock {\it Advances in Applied Mathematics}, 2015, {\bf 64}(3).
+
+\bibitem{chen16}
+Chen S, Hou Q, Labahn G, and Wang R,
+\newblock Existence problem of telescopers: Beyond the bivariate case.
+\newblock In {\it Proceedings of ISSAC'16}, pages 167--174, 2016.
+
+\bibitem{picard06}
+Picard E and Simart G,
+\newblock {\it Theorie des fonctions algebriques de deux variables
+  independantes}.
+\newblock Gauthier-Villars, 1906.
+
+\bibitem{picard33}
+Picard E,
+\newblock Sur les periodes des integrales doubles et sur une classe d'equations
+  differentielles lineaires.
+\newblock {\it Annales scientifiques de l'E.N.S.}, 1933, {\bf 50}:393--395.
+
+\bibitem{dwork62}
+Dwork B,
+\newblock On the zeta function of a hypersurface.
+\newblock {\it Publications Mathematiques de l'IHES}, 1962, {\bf 12}:5--68.
+
+\bibitem{dwork64}
+Dwork B,
+\newblock On the zeta function of a hypersurface {II}.
+\newblock {\it Annals of Mathematics}, 1964, {\bf 80}(2):227--299.
+
+\bibitem{griffiths69}
+Griffiths P,
+\newblock On the periods of certain rational integrals {I}.
+\newblock {\it Annals of Mathematics}, 1969, {\bf 90}(3):460--495.
+
+\bibitem{griffiths69a}
+Griffiths P,
+\newblock On the periods of certain rational integrals {II}.
+\newblock {\it Annals of Mathematics}, 1969, {\bf 90}(3):496--541.
+
+\bibitem{bostan13b}
+ Bostan A,  Lairez P, and  Salvy B,
+\newblock Creative telescoping for rational functions using the
+  {G}riffiths-{D}work method.
+\newblock In {\it Proceedings of ISSAC'13}, pages 93--100, 2013.
+
+\bibitem{chyzak14a}
+ Chyzak F, Mahboubi A, Sibut-Pinote T, and Tassi E.
+\newblock A computer-algebra-based formal proof of the irrationality of
+  $\zeta(3)$.
+\newblock In Gerwin Klein and Ruben Gamboa, editors, {\it Interactive Theorem
+  Proving}, volumn  {\bf 8558} in Lecture Notes in Computer Science, pages 160--176,
+  Vienna, Austria, 2014. Springer.
+
+\bibitem{abramov05}
+Abramov S and Petkov{\v s}ek M.
+\newblock Gosper's algorithm, accurate summation, and the discrete
+  {N}ewton-{L}eibniz formula.
+\newblock In {\it Proceedings of ISSAC'05}, pages 5--12, 2005.
+
+\bibitem{ryabenko11}
+ Ryabenko A.
+\newblock A definite summation of hypergeometric terms of special kind.
+\newblock {\it Programming and Computer Software}, 2011, {\bf 37}(4):187--191.
+
+\bibitem{harrison15}
+Harrison J,
+\newblock Formal proofs of hypergeometric sums.
+\newblock {\it Journal of Automated Reasoning}, 2015, {\bf 55}:223--243.
+
+\bibitem{rosenkranz08}
+ Rosenkranz M and  Regensburger G,
+\newblock Integro-differential polynomials and operators.
+\newblock In {\it Proceedings of ISSAC'08}, pages 261--268, 2008.
+
+\bibitem{rosenkranz08a}
+ Rosenkranz M and  Regensburger G,
+\newblock Solving and factoring boundary problems for linear ordinary
+  differential equations in differential algebras.
+\newblock {\it Journal of Symbolic Computation}, 2008, {\bf 43}(8):515--544.
+
+\bibitem{regensburger09}
+ Rosenkranz M, Regensburger G, and   Middeke J,
+\newblock A skew polynomial approach to integro-differential operators.
+\newblock In {\it Proceedings of ISSAC'09}, pages 287--294, 2009.
+
+\bibitem{guo14}
+ Guo L,  Rosenkranz M, and Regensburger G,
+\newblock On integro-differential algebras.
+\newblock {\it Journal of Pure and Applied Algebra}, 2014, 218:456--473.
+
+\bibitem{regensburger16}
+Regensburger G,
+\newblock Symbolic computation with integro-differential operators.
+\newblock In {\it Proceedings of ISSAC'16}, pages 17--18, 2016.
+
+\bibitem{bostan15}
+Bostan A, Lairez P, and Salvy B,
+\newblock Multiple binomial sums.
+\newblock {\it Journal of Symbolic Computation},
+Available online 23 June 2016.
+
+
+\bibitem{christol88}
+Christol G,
+\newblock Globally bounded solutions of differential equations.
+\newblock In {\it Analytic number theory}, volume 1434 of {\it Lecture Notes in
+  Mathematics}, pages 45--64, 1990.
+
+\bibitem{majewicz96}
+Majewicz J,
+\newblock {WZ}-style certification and sister {C}eline's technique for
+  {A}bel-type identities.
+\newblock {\it J. Difference Eqs and Appl.}, 1996, {\bf 2}:55--65.
+
+\bibitem{chen09}
+Chen W. Y. C and Sun L.H,
+\newblock Extended {Z}eilberger's algorithm for identities on {B}ernoulli and
+  {E}uler polynomials.
+\newblock {\it Journal of Number Theory}, 2009, {\bf 129}(9):2111--2132.
+
+\bibitem{chyzak09a}
+Chyzak F,  Kauers M, and  Salvy B,
+\newblock A non-holonomic systems approach to special function identities.
+\newblock In John May, editor, {\it Proceedings of ISSAC'09}, pages 111--118,
+  2009.
+
+\bibitem{bernardi16}
+ Bernardi O,  Bousquet-Melou M, and  Raschel K,
+\newblock Counting quadrant walks via {T}utte's invariant method.
+\newblock In {\it Proceedings of FPSAC'16}, 2016.
+\newblock to appear.
+
+\bibitem{mansfield93}
+ Mansfield E,
+\newblock {\it Differential {Gr\"obner} bases}.
+\newblock PhD thesis, University of Sydney, 1993.
+
+\bibitem{gerdt97}
+ Gerdt V,
+\newblock Gr{\"o}bner bases and involutive methods of algebraic and
+  differential equations.
+\newblock {\it Math. Comput. Modeling}, 1997, {\bf 25}(8/9):75--90.
+
+\bibitem{hubert00}
+  Hubert E,
+\newblock Factorization-free decomposition algorithms in differential algebra.
+\newblock {\it Journal of Symbolic Computation}, 2000, {\bf  29}(4--5):641--662.
+
+\bibitem{chen03}
+  Chen Y and  Gao X,
+\newblock Involutive characteristic sets of algebraic partial differential
+  equation systems.
+\newblock {\it Science in China (A)}, 2003, {\bf 46}(4):469--487.
+
+\bibitem{gao2013}
+  Gao X,  Li W, and  Yuan C.
+\newblock Intersection theory in differential algebraic geometry: generic
+  intersections and the differential {C}how form.
+\newblock {\it Trans. Amer. Math. Soc.}, 2013, {\bf 365}(9):4575--4632.
+
+\bibitem{petkovsek92}
+ Petkov{\v s}ek M,
+\newblock Hypergeometric solutions of linear recurrences with polynomial
+  coefficients.
+\newblock {\it Journal of Symbolic Computation}, 1992, {\bf 14}(2--3):243--264.
+
+\bibitem{abramov94}
+ Abramov S and   Petkovsek M,
+\newblock D'alembertian solutions of linear differential and difference
+  equations.
+\newblock In {\it Proceedings of ISSAC'94}, pages 169--174, 2004.
+
+\bibitem{put97}
+ van~der Put M and Singer M,
+\newblock {\it {G}alois Theory of Difference Equations}, volume 1666 of {\it
+  Lecture Notes in Mathematics}.
+\newblock Springer, 1997.
+
+\bibitem{hendriks98}
+ Hendriks P and  Singer M,
+\newblock Solving difference equations in finite terms.
+\newblock {\it Journal of Symbolic Computation}, 1999, {\bf  27}(3):239--259.
+
+\bibitem{hoeij10}
+  van Hoeij M and  Yuan Q,
+\newblock Finding all {B}essel type solutions for linear differential equations
+  with rational function coefficients.
+\newblock In {\it Proceedings of ISSAC'10}, pages 37--44, 2010.
+
+\bibitem{cha10}
+  Cha Y,  van Hoeij M, and   Levy G,
+\newblock {Solving recurrence relations using local invariants}.
+\newblock In {\it {Proceedings ISSAC'10}}, pages 303--309, 2010.
+
+\bibitem{cha10a}
+ Cha Y,
+\newblock {\it {Closed Form Solutions of Linear Difference Equations}}.
+\newblock PhD thesis, Florida State University, 2010.
+
+\bibitem{kunwar13}
+ Kunwar V and   van Hoeij M,
+\newblock Second order differential equations with hypergeometric solutions of
+  degree three.
+\newblock In {\it Proceedings of ISSAC'13}, pages 235--242, 2013.
+
+\bibitem{imamoglu15}
+ Imamoglu E and van Hoeij M,
+\newblock Computing hypergeometric solutions of second order linear
+  differential equations using quotients of formal solutions.
+\newblock In {\it Proceedings ISSAC'15}, pages 235--242, 2015.
+
+\bibitem{koutschan10c}
+ Koutschan C,
+\newblock {HolonomicFunctions (User's Guide)}.
+\newblock Technical Report 10-01, RISC Report Series, University of Linz,
+  Austria, January 2010.
+
+\bibitem{kauers11b}
+  Kauers M and  Zeilberger D,
+\newblock The computational challenge of enumerating high dimensional rook
+  walks.
+\newblock {\it Advances in Applied Mathematics}, 2011, {\bf 47}(4):813--819.
+
+\bibitem{lipshitz88}
+ Lipshitz L,
+\newblock The diagonal of a {D}-finite power series is {D}-finite.
+\newblock {\it Journal of Algebra}, 1988, 113:373--378.
+
+\bibitem{bostan11}
+  Bostan A,  Chyzak F, van Hoeij M, and   Pech L,
+\newblock Explicit formula for the generating series of diagonal 3d rook paths.
+\newblock {\it Seminaire Lotharingien Combinatoire}, 2011, {\bf 66}(B66a).
+
+\bibitem{beck03}
+  Beck M and   Pixton D,
+\newblock The {E}hrhart polynomial of the {B}irkhoff polytope.
+\newblock {\it Discrete Computational Geometry}, 2003, {\bf 30}:623--637.
+
+\bibitem{beck07}
+  Beck M and  Robins S,
+  \newblock {\it Computing the Continuous Discretely: Integer-Point Enumeration
+  in Polyhedra}.
+\newblock Springer, 2007.
 
 \end{thebibliography}
-%%Please make sure that your given name is abbreviated as the first capital letter, such as Zhang X T, Tami T,...
+
+%%%Please make sure that your given name is abbreviated as the first capital letter, such as Zhang X T, Tami T,...
 
 \end{document}
